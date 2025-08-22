@@ -5,11 +5,7 @@
 ## Environment Setup
 
 It is recommended to use a **fresh virtual environment** with Python **3.10 or 3.11** to ensure compatibility.  
-If you already have a clean environment, you can install dependencies directly with:
 
-```bash
-pip install -r requirements.txt
-```
 
 ### Create and activate a virtual environment
 
@@ -33,17 +29,6 @@ pip install -r requirements.txt
 ds_code_challenge/
 │
 ├── data/                        
-│   ├── 1min_bellville.csv
-│   ├── anon_sr_data.csv
-│   ├── bv_wind_filled.csv
-│   ├── bv_wind_processed.csv
-│   ├── city-hex-polygons-8-10.geojson   
-│   ├── city-hex-polygons-8.geojson      
-│   ├── hex8_features.js
-│   ├── sr_hex_truncated.csv
-│   ├── sr_hex.csv(.gz)                 
-│   ├── sr_with_wind.csv
-│   └── Wind_direction_and_speed_2020.ods
 │
 ├── notebooks/                 
 │   ├── 1.data_extraction.ipynb        
@@ -51,11 +36,6 @@ ds_code_challenge/
 │   └── 3.further_data_transform.ipynb  
 │
 ├── output/                   
-│   ├── 1min_bellville.csv
-│   ├── anon_sr_data.csv
-│   ├── bv_wind_filled.csv
-│   ├── bv_wind_processed.csv
-│   └── sr_with_wind.csv
 │
 ├── tests/                     
 │   ├── anon_bv_sr_wind_test.py
