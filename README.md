@@ -92,11 +92,11 @@ jupyter nbconvert --to notebook --execute notebooks/3.further_data_transform.ipy
    - `2.data_transform.ipynb`
    - `3.further_data_transform.ipynb`
 
-Please run them them in order, there will be no interaction once you run all in the notebook.
+Please run them them in order, there will be no interaction once you use the run all function in each notebook.
 
 ---
 
-## 📖 Notebook Summaries
+## Notebook Summaries
 
 ### Part 1 – Data Extraction (`1.data_extraction.ipynb`)
 - Retrieves **H3 level-8 geospatial data** directly from the **H3 level-10 GeoJSON** file on S3 using **AWS S3 Select** for efficient querying.  
@@ -118,7 +118,7 @@ Please run them them in order, there will be no interaction once you run all in 
 - Subsamples **service requests** near the centroid of **Bellville South**.  
 - Augments data with **2020 wind speed and direction** from the Bellville South AQM site.  
 - Produces an **anonymised dataset**, preserving ~500m spatial accuracy and 6-hour temporal accuracy, while removing personally identifiable fields.  
-- 
+
 ### Outputs (`output/`)
 - `1min_bellville.csv` – Subsampled service requests near Bellville South centroid  
 - `bv_wind_processed.csv` – Raw AQM site wind data (processed for Bellville South)  
@@ -163,7 +163,7 @@ This notebook demonstrates:
 
 ## Part 2 - Data Transformation
 
-## 📖 Overview
+## Overview
 
 This notebook focuses on **cleaning, standardising, and enriching** the extracted service request data.  
 
