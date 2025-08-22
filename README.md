@@ -18,8 +18,8 @@ pip install -r requirements.txt
 python3.10 -m venv .venv
 
 # Activate environment
-source venv/bin/activate     # Linux / Mac
-venv\Scripts\activate        # Windows
+source .venv/bin/activate     # Linux / Mac
+.venv\Scripts\activate        # Windows
 ```
 
 ### 2. Install dependencies
