@@ -49,7 +49,7 @@ ds_code_challenge/
 ## Quick Start
 
 ```bash
-git clone https://github.com/<your-repo>/ds_code_challenge.git
+git clone https://github.com/YXXJIA005/ds_code_challenge.git
 cd ds_code_challenge
 python3.10 -m venv .venv
 source .venv/bin/activate
