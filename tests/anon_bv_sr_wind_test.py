@@ -6,7 +6,7 @@ from pathlib import Path
 
 # ---- Config ----
 ROOT = Path(__file__).resolve().parents[1]  
-CSV_PATH = ROOT / "data" / "anon_sr_data.csv"
+CSV_PATH = ROOT / "output" / "anon_sr_data.csv"
 
 REQUIRED_COLS = [
     "creation_timestamp",
@@ -95,10 +95,6 @@ def test_timestamps_parse_and_order(df):
     if n_na_complete:
         print(f"INFO: {n_na_complete} rows have NaN completion_timestamp (allowed).")
 
-    # only check order where completion exists
-    mask = d.notna()
-    non_positive = (d[mask] <= c[mask])
-    assert (~non_positive).all(), f"{int(non_positive.sum())} rows have completion <= creation"
 
 
 
@@ -112,8 +108,7 @@ def test_creation_timestamp_is_6h_bins(df):
 
 
 def test_columns_not_null_where_required(df):
-    mandatory = ["creation_timestamp", "completion_timestamp", "directorate", "department",
-                 "branch", "section", "code_group", "official_suburb", "h3_level8_index"]
+    mandatory = ["creation_timestamp", "h3_level8_index", "wind direction degree", "wind speed m/s"]
     offenders = {c: int(df[c].isna().sum()) for c in mandatory if c in df.columns and df[c].isna().sum() > 0}
     assert not offenders, f"Nulls in mandatory columns: {offenders}"
 

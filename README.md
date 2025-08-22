@@ -15,7 +15,7 @@ pip install -r requirements.txt
 
 ```bash
 # Create environment
-python3.10 -m venv venv
+python3.10 -m venv .venv
 
 # Activate environment
 source venv/bin/activate     # Linux / Mac
