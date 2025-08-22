@@ -12,6 +12,8 @@ It is recommended to use a **fresh virtual environment** with Python **3.10 or 3
 ```bash
 # Create environment
 python3.10 -m venv .venv
+# or
+python3.11 -m venv .venv
 
 # Activate environment
 source .venv/bin/activate     # Linux / Mac
