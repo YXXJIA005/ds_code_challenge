@@ -261,11 +261,11 @@ The tests check:
 
 - **Service requests with wind joined** (`sr_with_wind_validation_test.py`):  
   Verifies correct temporal joins between service requests and wind data, checks for unmatched rows, and validates 30-minute alignment.
-  This is expected to pass most, except it fails for having too many missing data in some fields
+  This is expected to pass all but one test, where it fails for having too many missing data in some fields.
 
 - **Anonymized service requests** (`anon_bv_sr_wind_test.py`):  
   Ensures dropped columns are not present, temporal generalization is applied (6-hour rounding), and spatial data is kept only at H3 resolution 8.
-  This is expected to pass all, except it fails for having too many missing data in some fields
+  This is expected to pass all but one test, where it fails for having too many missing data in some fields.
 
 ### How to run the tests
 
