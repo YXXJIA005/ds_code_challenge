@@ -7,11 +7,16 @@ odfpy==1.4.1
 jupyter_client==8.6.3
 jupyter_core==5.8.1
 notebook==7.2.2
+nbconvert>=7.10
+jupyterlab>=4.0
+matplotlib==3.9.2
+
 
 # Geospatial libraries
 shapely==2.1.1
 pyproj==3.7.1
 h3==4.3.1
+fiona==1.9.6
 
 # HTTP and AWS SDK
 requests==2.32.3
@@ -21,6 +26,7 @@ botocore==1.40.11
 # Testing
 pytest==8.4.1
 ipytest==0.14.2
+pyyaml==6.0.2
 
 # Optional diagnostics
 psutil==7.0.0

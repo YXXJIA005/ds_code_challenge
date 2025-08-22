@@ -1,13 +1,10 @@
 # City of Cape Town - Data Engineer Code Challenge
 
----
-
 ## Environment Setup
 
-It is recommended to use a **fresh virtual environment** with Python **3.10 or 3.11** to ensure compatibility.  
+It is recommended to use a **fresh virtual environment** with Python **3.10 or 3.11** to ensure compatibility.
 
-
-### Create and activate a virtual environment
+### 1. Create and activate a virtual environment
 
 ```bash
 # Create environment
@@ -27,37 +24,64 @@ pip install -r requirements.txt
 ```
 
 ## Project Structure
-```bash
+
+```
 ds_code_challenge/
-│
 ├── data/                        
-│
 ├── notebooks/                 
 │   ├── 1.data_extraction.ipynb        
 │   ├── 2.data_transform.ipynb         
 │   └── 3.further_data_transform.ipynb  
-│
 ├── output/                   
-│
 ├── tests/                     
 │   ├── anon_bv_sr_wind_test.py
 │   ├── base_service_request_validation_test.py
 │   ├── bv_wind_filled_validation_test.py
 │   ├── bv_wind_validation_test.py
 │   └── sr_with_wind_validation_test.py
-│
 ├── img/                       
-│
 ├── requirements.txt          
 ├── README.md                 
 ├── LICENSE                     
 └── .gitignore                  
 ```
 
----
-##  Usage
+## Quick Start
 
-### Running the notebooks
+```bash
+git clone https://github.com/<your-repo>/ds_code_challenge.git
+cd ds_code_challenge
+python3.10 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+jupyter nbconvert --to notebook --execute notebooks/1.data_extraction.ipynb
+jupyter nbconvert --to notebook --execute notebooks/2.data_transform.ipynb
+jupyter nbconvert --to notebook --execute notebooks/3.further_data_transform.ipynb
+pytest -v
+```
+
+## Dependencies
+
+Key packages include:
+- pandas, numpy - data wrangling
+- geopandas, shapely, h3 - geospatial processing
+- boto3 - AWS s3 access
+- pytest, ipytest - testing
+
+
+
+## Usage
+
+### Running all notebooks automatically
+
+From the project root, you can execute all notebooks in sequence without opening Jupyter manually:
+
+```bash
+jupyter nbconvert --to notebook --execute notebooks/1.data_extraction.ipynb --inplace
+jupyter nbconvert --to notebook --execute notebooks/2.data_transform.ipynb --inplace
+jupyter nbconvert --to notebook --execute notebooks/3.further_data_transform.ipynb --inplace
+```
+### Running them manually
 
 1. Start Jupyter:
    ```bash
@@ -215,12 +239,6 @@ This notebook focuses on **cleaning, standardising, and enriching** the extracte
 - **Timezone handling**: Timestamps are made timezone-naïve prior to rounding and joins to ensure consistent matching.
 
 ---
-
-## 🧪 Running Data Quality Tests
-
-Data quality tests are provided for reproducibility and validation. Please run it after running all notebooks as the data is mostly produced by notebook 3.
-It tests the
-
 
 ## 🧪 Running Data Quality Tests
 
