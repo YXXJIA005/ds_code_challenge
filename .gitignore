@@ -1,3 +1,6 @@
+*.jsonl
 *.csv
+*.gz
 *.geojson
-*.json
+*.ods
+*.pyc
